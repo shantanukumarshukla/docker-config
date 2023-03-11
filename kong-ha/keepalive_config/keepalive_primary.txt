@@ -1,0 +1,25 @@
+vrrp_script haproxy_container {
+    script "/usr/bin/docker ps  | grep proxy"
+    interval 5
+    weight -20
+    fall 2
+    rise 2
+}
+
+vrrp_instance VI_1 {
+    interface ens5
+    state BACKUP
+    virtual_router_id 205
+    priority 100
+    unicast_src_ip 10.0.1.192
+    unicast_peer {
+        10.0.1.23
+    }
+ virtual_ipaddress {
+        3.6.253.121 # VIRTUAL IP CREATED
+    }
+    track_script {
+        haproxy_container
+    }
+ notify /docker/kong/aws-simple-failover-setup-using-elastic-ip.sh
+}

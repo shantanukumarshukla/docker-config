@@ -1,0 +1,322 @@
+{
+"tripProgressOne":[
+            { "originPoint": "KHURDA PLANT", "destination": "M.A ENTERPRISES", "distance": "200km","speed":50,"eta":"02-Jan-2020 15:45", "tripTime": "4hr","tripStatus":"active","distanceCovered":61 },
+            { "originPoint": "M.A ENTERPRISES", "destination": "SHANTHI COOL DRINKS", "distance": "100km","speed":50,"eta":"02-Jan-2020 15:45","tripTime": "1hr", "tripStatus":"pending"},
+            { "originPoint": "SHANTHI COOL DRINKS", "destination": "SHANKER ENTERPRISES", "distance": "300km", "speed":50,"eta":"02-Jan-2020 15:45","tripTime": "3hr","tripStatus":"pending" },
+            { "originPoint": "SHANKER ENTERPRISES", "destination": "VENKATESHWARA AGENCIES", "distance": "150km","speed":50,"eta":"02-Jan-2020 15:45","tripTime": "1hr 15min", "tripStatus":"pending" }
+        ],
+	 "tripProgressTwo": [
+            { "originPoint": "KHURDA PLANT", "destination": "M.A ENTERPRISES", "distance": "200km","speed":50,"eta":"02-Jan-2020 15:45", "tripTime": "4hr","tripStatus":"completed","distanceCovered":61 },
+            { "originPoint": "M.A ENTERPRISES", "destination": "SHANTHI COOL DRINKS", "distance": "100km","speed":50,"eta":"02-Jan-2020 15:45","tripTime": "1hr", "tripStatus":"start"},
+            { "originPoint": "SHANTHI COOL DRINKS", "destination": "SHANKER ENTERPRISES", "distance": "300km", "speed":50,"eta":"02-Jan-2020 15:45","tripTime": "3hr","tripStatus":"pending" },
+            { "originPoint": "SHANKER ENTERPRISES", "destination": "VENKATESHWARA AGENCIES", "distance": "150km","speed":50,"eta":"02-Jan-2020 15:45","tripTime": "1hr 15min", "tripStatus":"pending" }
+        ],
+		
+	"tripProgressThree": [
+            { "originPoint": "KHURDA PLANT", "destination": "M.A ENTERPRISES", "distance": "200km","speed":50,"eta":"02-Jan-2020 15:45", "tripTime": "4hr","tripStatus":"completed","distanceCovered":61 },
+            { "originPoint": "M.A ENTERPRISES", "destination": "SHANTHI COOL DRINKS", "distance": "100km","speed":50,"eta":"02-Jan-2020 15:45","tripTime": "1hr", "tripStatus":"active","distanceCovered":22},
+            { "originPoint": "SHANTHI COOL DRINKS", "destination": "SHANKER ENTERPRISES", "distance": "300km", "speed":50,"eta":"02-Jan-2020 15:45","tripTime": "3hr","tripStatus":"pending" },
+            { "originPoint": "SHANKER ENTERPRISES", "destination": "VENKATESHWARA AGENCIES", "distance": "150km","speed":50,"eta":"02-Jan-2020 15:45","tripTime": "1hr 15min", "tripStatus":"pending" }
+        ],
+	
+	"tripProgressFour": [
+            { "originPoint": "KHURDA PLANT", "destination": "M.A ENTERPRISES", "distance": "200km","speed":50,"eta":"02-Jan-2020 15:45", "tripTime": "4hr","tripStatus":"completed","distanceCovered":61 },
+            { "originPoint": "M.A ENTERPRISES", "destination": "SHANTHI COOL DRINKS", "distance": "100km","speed":50,"eta":"02-Jan-2020 15:45","tripTime": "1hr", "tripStatus":"completed"},
+            { "originPoint": "SHANTHI COOL DRINKS", "destination": "SHANKER ENTERPRISES", "distance": "300km", "speed":50,"eta":"02-Jan-2020 15:45","tripTime": "3hr","tripStatus":"active" ,"distanceCovered":76},
+            { "originPoint": "SHANKER ENTERPRISES", "destination": "VENKATESHWARA AGENCIES", "distance": "150km","speed":50,"eta":"02-Jan-2020 15:45","tripTime": "1hr 15min", "tripStatus":"pending" }
+        ],
+		
+	"tripProgressFive": [
+            { "originPoint": "KHURDA PLANT", "destination": "M.A ENTERPRISES", "distance": "200km","speed":50,"eta":"02-Jan-2020 15:45", "tripTime": "4hr","tripStatus":"completed","distanceCovered":61 },
+            { "originPoint": "M.A ENTERPRISES", "destination": "SHANTHI COOL DRINKS", "distance": "100km","speed":50,"eta":"02-Jan-2020 15:45","tripTime": "1hr", "tripStatus":"completed"},
+            { "originPoint": "SHANTHI COOL DRINKS", "destination": "SHANKER ENTERPRISES", "distance": "300km", "speed":50,"eta":"02-Jan-2020 15:45","tripTime": "3hr","tripStatus":"completed" },
+            { "originPoint": "SHANKER ENTERPRISES", "destination": "VENKATESHWARA AGENCIES", "distance": "150km","speed":50,"eta":"02-Jan-2020 15:45","tripTime": "1hr 15min", "tripStatus":"active","distanceCovered":45 }
+        ],
+
+	"tripProgressSix": [
+            { "originPoint": "KHURDA PLANT", "destination": "M.A ENTERPRISES", "distance": "200km","speed":50,"eta":"02-Jan-2020 15:45", "tripTime": "4hr","tripStatus":"completed","distanceCovered":61 },
+            { "originPoint": "M.A ENTERPRISES", "destination": "SHANTHI COOL DRINKS", "distance": "100km","speed":50,"eta":"02-Jan-2020 15:45","tripTime": "1hr", "tripStatus":"completed"},
+            { "originPoint": "SHANTHI COOL DRINKS", "destination": "SHANKER ENTERPRISES", "distance": "300km", "speed":50,"eta":"02-Jan-2020 15:45","tripTime": "3hr","tripStatus":"completed" },
+            { "originPoint": "SHANKER ENTERPRISES", "destination": "VENKATESHWARA AGENCIES", "distance": "150km","speed":50,"eta":"02-Jan-2020 15:45","tripTime": "1hr 15min", "tripStatus":"completed" }
+        ],
+  "tripCount": {
+    "totalTrip": 1156,
+    "complectedTrips":1222,
+    "activeTrip":989,
+    "notMonitor":456,
+    "currentlyActive":768,
+    "abortedTrip":435
+  },
+  "tripReport": [
+    {
+      "reportName": "totalTrip",
+      "reportData": [
+        {
+          "trip": 920455,
+          "vehicle": "MH34B9251",
+          "erpRef": "4982810449",
+          "source": "AWAROUR CEMENT WORKS",
+          "destination": "WANI FACTORY-STO",
+          "transporter": "CARRIERS"
+        },
+        {
+          "trip": 920467,
+          "vehicle": "OD34B9251",
+          "erpRef": "4982810450",
+          "source": "AWA CEMENT WORKS",
+          "destination": "WANI FACTORY-STO",
+          "transporter": "CARRIERS"
+        },
+        {
+          "trip": 920461,
+          "vehicle": "RJ34B9251",
+          "erpRef": "4982810451",
+          "source": "JK CEMENT WORKS",
+          "destination": "WANI FACTORY-STO",
+          "transporter": "CARRIERS"
+        },
+        {
+          "trip": 920462,
+          "vehicle": "WB34B9251",
+          "erpRef": "4982810452",
+          "source": "power CEMENT WORKS",
+          "destination": "WANI FACTORY-STO",
+          "transporter": "CARRIERS"
+        },
+        {
+          "trip": 920463,
+          "vehicle": "KA34B9251",
+          "erpRef": "4982810453",
+          "source": "AWAROUR CEMENT WORKS",
+          "destination": "WANI FACTORY-STO",
+          "transporter": "CARRIERS"
+        }
+      ]
+    },
+    {
+      "reportName": "complectedTrips",
+      "reportData": [
+        {
+          "trip": 920400,
+          "vehicle": "MH34B9200",
+          "erpRef": "4982810400",
+          "source": "towards CEMENT WORKS",
+          "destination": "towards FACTORY-STO",
+          "transporter": "towards"
+        },
+        {
+          "trip": 920467,
+          "vehicle": "OD34B9251",
+          "erpRef": "4982810450",
+          "source": "AWA CEMENT WORKS",
+          "destination": "WANI FACTORY-STO",
+          "transporter": "CARRIERS"
+        },
+        {
+          "trip": 920461,
+          "vehicle": "RJ34B9251",
+          "erpRef": "4982810451",
+          "source": "JK CEMENT WORKS",
+          "destination": "WANI FACTORY-STO",
+          "transporter": "CARRIERS"
+        },
+        {
+          "trip": 920462,
+          "vehicle": "WB34B9251",
+          "erpRef": "4982810452",
+          "source": "power CEMENT WORKS",
+          "destination": "WANI FACTORY-STO",
+          "transporter": "CARRIERS"
+        },
+        {
+          "trip": 920463,
+          "vehicle": "KA34B9251",
+          "erpRef": "4982810453",
+          "source": "AWAROUR CEMENT WORKS",
+          "destination": "WANI FACTORY-STO",
+          "transporter": "CARRIERS"
+        }
+      ]
+    },
+    {
+      "reportName": "activeTrip",
+      "reportData": [
+        {
+          "trip": 920499,
+          "vehicle": "MH34B9200",
+          "erpRef": "4982810400",
+          "source": "atCustomer CEMENT WORKS",
+          "destination": "atCustomer FACTORY-STO",
+          "transporter": "atCustomer"
+        },
+        {
+          "trip": 920499,
+          "vehicle": "OD34B9251",
+          "erpRef": "4982810450",
+          "source": "AWA CEMENT WORKS",
+          "destination": "WANI FACTORY-STO",
+          "transporter": "atCustomer"
+        },
+        {
+          "trip": 920461,
+          "vehicle": "RJ34B9251",
+          "erpRef": "4982810451",
+          "source": "JK CEMENT WORKS",
+          "destination": "WANI FACTORY-STO",
+          "transporter": "atCustomer"
+        },
+        {
+          "trip": 920462,
+          "vehicle": "WB34B9299",
+          "erpRef": "4982810452",
+          "source": "power CEMENT WORKS",
+          "destination": "WANI FACTORY-STO",
+          "transporter": "atCustomer"
+        },
+        {
+          "trip": 920463,
+          "vehicle": "KA34B9299",
+          "erpRef": "4982810453",
+          "source": "AWAROUR CEMENT WORKS",
+          "destination": "WANI FACTORY-STO",
+          "transporter": "atCustomer"
+        }
+      ]
+    },
+    {
+      "reportName": "notMonitor",
+      "reportData": [
+        {
+          "trip": 920499,
+          "vehicle": "MH34B9200",
+          "erpRef": "4982810400",
+          "source": "returning CEMENT WORKS",
+          "destination": "atCustomer FACTORY-STO",
+          "transporter": "returning"
+        },
+        {
+          "trip": 920499,
+          "vehicle": "OD34B9251",
+          "erpRef": "4982810450",
+          "source": "AWA CEMENT WORKS",
+          "destination": "WANI FACTORY-STO",
+          "transporter": "returning"
+        },
+        {
+          "trip": 920461,
+          "vehicle": "RJ34B9251",
+          "erpRef": "4982810451",
+          "source": "JK CEMENT WORKS",
+          "destination": "WANI FACTORY-STO",
+          "transporter": "returning"
+        },
+        {
+          "trip": 920462,
+          "vehicle": "WB34B9299",
+          "erpRef": "4982810452",
+          "source": "power CEMENT WORKS",
+          "destination": "WANI FACTORY-STO",
+          "transporter": "returning"
+        },
+        {
+          "trip": 920463,
+          "vehicle": "KA34B9299",
+          "erpRef": "4982810453",
+          "source": "AWAROUR CEMENT WORKS",
+          "destination": "WANI FACTORY-STO",
+          "transporter": "returning"
+        }
+      ]
+    },
+    {
+      "reportName": "currentlyActive",
+      "reportData": [
+        {
+          "trip": 920499,
+          "vehicle": "MH34B9200",
+          "erpRef": "4982810400",
+          "source": "actionableTrip CEMENT WORKS",
+          "destination": "actionableTrip FACTORY-STO",
+          "transporter": "actionableTrip"
+        },
+        {
+          "trip": 920499,
+          "vehicle": "OD34B9251",
+          "erpRef": "4982810450",
+          "source": "AWA CEMENT WORKS",
+          "destination": "WANI FACTORY-STO",
+          "transporter": "actionableTrip"
+        },
+        {
+          "trip": 920461,
+          "vehicle": "RJ34B9251",
+          "erpRef": "4982810451",
+          "source": "JK CEMENT WORKS",
+          "destination": "WANI FACTORY-STO",
+          "transporter": "actionableTrip"
+        },
+        {
+          "trip": 920462,
+          "vehicle": "WB34B9299",
+          "erpRef": "4982810452",
+          "source": "power CEMENT WORKS",
+          "destination": "WANI FACTORY-STO",
+          "transporter": "actionableTrip"
+        },
+        {
+          "trip": 920463,
+          "vehicle": "KA34B9299",
+          "erpRef": "4982810453",
+          "source": "AWAROUR CEMENT WORKS",
+          "destination": "WANI FACTORY-STO",
+          "transporter": "actionableTrip"
+        }
+      ]
+    },
+    {
+      "reportName": "abortedTrip",
+      "reportData": [
+        {
+          "trip": 920499,
+          "vehicle": "MH34B9200",
+          "erpRef": "4982810400",
+          "source": "monitorTrip CEMENT WORKS",
+          "destination": "monitorTrip FACTORY-STO",
+          "transporter": "monitorTrip"
+        },
+        {
+          "trip": 920499,
+          "vehicle": "OD34B9251",
+          "erpRef": "4982810450",
+          "source": "AWA CEMENT WORKS",
+          "destination": "WANI FACTORY-STO",
+          "transporter": "monitorTrip"
+        },
+        {
+          "trip": 920461,
+          "vehicle": "RJ34B9251",
+          "erpRef": "4982810451",
+          "source": "JK CEMENT WORKS",
+          "destination": "WANI FACTORY-STO",
+          "transporter": "monitorTrip"
+        },
+        {
+          "trip": 920462,
+          "vehicle": "WB34B9299",
+          "erpRef": "4982810452",
+          "source": "power CEMENT WORKS",
+          "destination": "WANI FACTORY-STO",
+          "transporter": "monitorTrip"
+        },
+        {
+          "trip": 920463,
+          "vehicle": "KA34B9299",
+          "erpRef": "4982810453",
+          "source": "AWAROUR CEMENT WORKS",
+          "destination": "WANI FACTORY-STO",
+          "transporter": "monitorTrip"
+        }
+      ]
+    }
+  ]
+}

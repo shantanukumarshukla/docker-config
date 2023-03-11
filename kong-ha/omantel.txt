@@ -1,0 +1,127 @@
+UI Deployment
+============
+1- In 149 server, we ave deployed one nginx web server
+2- Under dir /app/bitool
+3- there is docker-compose file and there is dir name as conf.d and build 
+4- In conf.d it contains routing configuration
+5- In Build dir, it contain ui project that going to deployment in container
+6- For new deployment, extract the zip file using unzip command
+	example: unzip file-name.zip
+7- After extracting zip we will get build dir 
+8- Delete the older build dir from /app/bitool
+9- move this build dir to /app/bitool
+10- restart the container using following command:
+	docker-compose up -d --force-recreate
+
+Service
+=========
+
+Kong_Passdword = Insync@123
+
+curl -i -s -X POST http://localhost:8001/services --data name=bitool_web_service --data url='http://172.27.128.148:80'
+
+curl -X GET http://localhost:8001/services/bitool_web_service
+
+curl --request PATCH --url localhost:8001/services/bitool_web_service --data retries=6
+
+
+Route
+=====
+curl -i -X POST http://localhost:8001/services/bitool_web_service/routes --data 'paths[]=/login' --data name=bitool_routes
+
+curl -i -X POST http://localhost:8001/services/bitool_web_service_2/routes --data 'paths[]=/login' --data name=bitool_routes_2
+
+Load-Balancing
+================
+curl -X POST http://localhost:8001/upstreams --data name=bitool_web_upstream
+
+curl -X POST http://localhost:8001/upstreams/bitool_web_upstream/targets --data target='172.27.128.148:80'
+
+curl -X POST http://localhost:8001/upstreams/bitool_web_upstream/targets --data target='172.27.128.149:80'
+
+curl -X PATCH http://localhost:8001/services/bitool_web_service --data host='bitool_web_upstream'
+
+
+Plugins
+========
+
+curl -X POST http://localhost:8001/services/go_api_service/plugins \
+    --data "name=proxy-cache"  \
+    --data "config.response_code=200" \
+    --data "config.request_method=GET" \
+    --data "config.request_method=HEAD" \
+    --data "config.content_type=text/plain" \
+    --data "config.content_type=application/json" \
+    --data "config.cache_ttl=300" \
+    --data "config.strategy=memory"
+
+
+API
+====
+
+Username : root@93.115.22.132
+Password: WNfytZu4TZDvdUS7!
+
+
+password: FcFRe49YGY6aD3nZ!
+user=root@2.56.215.239
+ip: 2.56.215.239
+
+
+https://omantelsip.omantel.om/
+
+http://sip-golang-omantel-sip.apps.ocpprod01.otg.om
+
+curl -i -s -X POST http://localhost:8001/services --data name=go_api_service --data url='http://sip-golang-omantel-sip.apps.ocpprod01.otg.om:80'
+curl --request PATCH --url localhost:8001/services/go_api_service --data retries=6
+curl -X GET http://localhost:8001/services/go_api_service
+curl -i -X POST http://localhost:8001/services/go_api_service/routes --data 'paths[]=/sales/incentive/generate-otp' --data name=go_api_routes
+curl -X POST http://localhost:8001/upstreams --data name=go_api
+curl -X POST http://localhost:8001/upstreams/go_api/targets --data target='sip-golang-omantel-sip.apps.ocpprod01.otg.om:80'
+curl -X PATCH http://localhost:8001/services/go_api_service --data host='go_api'
+	
+https://route-omantel-sip.apps.ocpprod01.otg.om 
+
+ golang-backend
+ 
+ wat-sia-api01p-v.otg.om
+
+172.27.128.148
+
+wat-sia-api02p-v.otg.om
+
+172.27.128.149
+
+
+10.164.42.80:8090 
+ 
+ curl --location --request POST 'http://golang-backend:8090/sales/incentive/generate-otp' --header 'Content-Type: application/json' --data-raw '{ "client_id": "10454379"}'
+ 
+ 
+ server1 where u installed kong
+ 172.27.128.148
+ 
+ server 2
+ 172.27.128.149
+ 
+ both username and password
+ sia
+ sia@123
+ 
+ 
+ http://sip-golang-omantel-sip.apps.ocpprod01.otg.om --> this is the api url?
+ 
+ should be backend rout
+ 
+ 
+ http://localhot:3086/api/bk_auction/callback
+ 
+ curl --location --request POST 'http://sip-golang-omantel-sip.apps.ocpprod01.otg.om/sales/incentive/generate-otp' --header 'Content-Type: application/json' --data-raw '{ "client_id": "TEMP123" }'
+ curl --location --request POST 'http://172.27.128.149/sales/incentive/generate-otp' --header 'Content-Type: application/json' --data-raw '{ "client_id": "TEMP123" }'
+ curl --location --request POST 'https://omantelsip.omantel.om/sales/incentive/generate-otp' --header 'Content-Type: application/json' --data-raw '{ "client_id": "TEMP123" }'
+ docker rm -f $(docker ps -aq)
+ docker-compose up -d postgresql-master
+docker-compose run --rm kong kong migrations bootstrap
+docker-compose run --rm kong kong migrations up
+docker-compose up -d
+ 

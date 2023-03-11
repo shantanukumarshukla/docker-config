@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  syncthing:
+    image: syncthing/syncthing
+    restart: always
+    ports:
+      - "15001:8384"
+      - "22000:22000"
+      - "21027:21027/udp"
+
+    volumes:
+      - "./config:/var/syncthing/.config/syncthing"
+      - "/app/syncthing/data:/var/syncthing"

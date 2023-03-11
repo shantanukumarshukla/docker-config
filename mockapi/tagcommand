@@ -1,0 +1,2 @@
+docker build -f mock-server-build -t mockserver .
+

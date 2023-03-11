@@ -1,0 +1,4 @@
+docker-compose up -d postgresql-master postgresql-slave
+docker-compose run --rm kong kong migrations bootstrap
+docker-compose run --rm kong kong migrations up
+docker-compose up -d --scale kong=2 

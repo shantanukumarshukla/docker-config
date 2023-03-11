@@ -1,0 +1,46 @@
+version: '3.7'
+services:
+  master:
+    image: redis:3
+    networks:
+      - appredis
+  slave:
+    image: redis:3
+    command: redis-server --slaveof redis-master 6379
+    links:
+      - master:redis-master
+    networks:
+      - appredis  
+  sentinel:
+    image: sentinel
+    environment:
+      - SENTINEL_DOWN_AFTER=400
+      - SENTINEL_FAILOVER=400
+      - 'VIRTUAL_HOST:localhost'
+    links:
+      - master:redis-master
+      - slave
+    networks:
+      - appredis
+      
+  appredis_proxy:
+    image: haproxy
+    depends_on:
+      - sentinel
+    environment:
+      - BALANCE=leastconn
+    links:
+      - sentinel
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /docker/redis/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+    ports:
+      - 26379:26379
+      - 4936:1936
+      - 6379:6379
+    networks:
+      - appredis    
+      
+networks:
+    appredis: 
+     driver: bridge

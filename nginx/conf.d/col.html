@@ -1,0 +1,28 @@
+<html>
+<head>
+<style>
+.song-notes {
+    display:none;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$('a.notes-link').click(function() {
+  $(this).next('.song-notes').toggle();
+});
+});
+</script>
+</head>
+<body>
+<div>
+<a href="#" class="notes-link">Song Notes</a>
+<div class="song-notes">text</div> <!-- HIDDEN DIV TO BE SHOWN WHEN LINK CLICKED -->
+</div>
+
+<div>
+<a href="#" class="notes-link">Song Notes</a>
+<div class="song-notes">text</div> <!-- HIDDEN DIV TO BE SHOWN WHEN LINK CLICKED -->
+</div>
+</body>
+</html>

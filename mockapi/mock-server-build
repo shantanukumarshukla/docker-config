@@ -1,0 +1,15 @@
+FROM alpine
+MAINTAINER shantanu <shantanu.s@noviretechnologies.com>
+#RUN apt-get update && apt-get install -y apt-utils vim nano telnet
+WORKDIR /data
+
+RUN set -xe \
+    && apk add --no-cache nodejs nodejs-npm \
+    && npm install -g json-server \
+    && rm -rf /tmp/npm* /var/cache/apk/*
+
+EXPOSE 3000
+
+ENTRYPOINT ["json-server"]
+CMD ["--help"]
+

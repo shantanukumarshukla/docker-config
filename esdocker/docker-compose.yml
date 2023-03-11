@@ -1,0 +1,57 @@
+version: '2.2'
+services:
+    elasticsearchm1:
+        image: 'elasticsearch:6.4.2'
+        container_name: elasticsearchm1
+        environment:
+            - node.name=node1
+            - node.master=true
+            - node.data=false
+            - cluster.name=docker-cluster
+            - bootstrap.memory_lock=true
+            - memory-swappiness=0
+            - memory=2G
+            - node.max_local_storage_nodes=4            
+            - 'ES_JAVA_OPTS=-Xms1g -Xmx1g'
+            - 'discovery.zen.minimum_master_nodes=1'
+            - 'discovery.zen.ping.unicast.hosts= elasticsearchm1'
+        ulimits:
+            memlock: {soft: -1, hard: -1}
+        ports:
+            - 9200:9200
+            - 9300:9300
+        volumes:
+            - esdatam1:/usr/share/elasticsearch/data
+        networks:
+            - esdocker_esnet
+            
+            
+    elasticsearchd:
+        image: 'elasticsearch:6.4.2'
+        environment:
+            - node.master=false
+            - node.data=true
+            - cluster.name=docker-cluster
+            - bootstrap.memory_lock=true
+            - memory-swappiness=0
+            - node.max_local_storage_nodes=4
+            - memory=4G            
+            - 'ES_JAVA_OPTS=-Xms2g -Xmx2g'
+            - 'discovery.zen.minimum_master_nodes=1'
+            - 'discovery.zen.ping.unicast.hosts= elasticsearchm1'
+        ulimits:
+            memlock: {soft: -1, hard: -1}
+        volumes:
+            - esdatad:/usr/share/elasticsearch/data
+        networks:
+            - esdocker_esnet
+    
+    
+volumes:
+    esdatam1:
+        driver: local
+    esdatad:
+        driver: local    
+networks:
+    esdocker_esnet: 
+     external: true
